@@ -1,5 +1,10 @@
+import NavBar from "../components/NavBar"
+
 export default function ArticlesPage () {
     return (
-        <p>This is Articles Page.</p>
+        <div>
+            <NavBar />
+            <p>This is Articles Page.</p>
+        </div>
     )
 }
