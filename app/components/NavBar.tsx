@@ -2,15 +2,14 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
-import { House, Newspaper, Calendar, BadgeInfo, Megaphone, User, Menu } from 'lucide-react';
+import { House, Newspaper, Calendar, BadgeInfo, Megaphone, Menu } from 'lucide-react';
+import Link from "next/link";
 
 const NavBar = () => {
   const navigation = [
@@ -19,15 +18,14 @@ const NavBar = () => {
     { name: "Events", href: "/events", icon: <Calendar className="mr-2" /> },
     { name: "Articles", href: "/articles", icon: <Newspaper className="mr-2" /> },
     { name: "About", href: "/about", icon: <BadgeInfo className="mr-2" /> },
-    { name: "Login", href: "/", icon: <User className="mr-2" /> }, // Need to change path
   ];
   
   return (
     <div className='relative flex items-center justify-between px-4 py-2 bg-centriaRed'>
       {/* Logo */}
-      <div className='flex items-center md:block hidden'>
+      <Link href="/" className='flex items-center md:block hidden'>
         <p className='text-2xl font-bold text-white'>Centria Hub</p>
-      </div>
+      </Link>
 
       {/* Desktop Menu */}
       <NavigationMenu className='hidden md:flex space-x-4'>
