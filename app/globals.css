@@ -20,7 +20,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
+:root {
+  --font-nunito-sans: Nunito, sans-serif;
+}
+
 html {
+  font-family: var(--font-nunito-sans), sans-serif;
   scroll-behavior: smooth;
 }
 
