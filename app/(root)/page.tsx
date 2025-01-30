@@ -1,6 +1,6 @@
 // import { elysia } from '@/elysia/client'
 import Image from 'next/image'
-import { CircleChevronDown, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { CircleChevronDown } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -81,7 +81,7 @@ export default async function Home() {
             <CarouselContent>
               {news.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card>
+                  <Card className='bg-white'>
                     <CardHeader>
                       <CardTitle>{item.title}</CardTitle>
                       <CardDescription>{item.posted_date}</CardDescription>
