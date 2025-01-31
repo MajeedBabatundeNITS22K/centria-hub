@@ -11,7 +11,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
 import { House, Newspaper, Calendar, BadgeInfo, Megaphone, Menu } from 'lucide-react';
 import Link from "next/link";
 
-export const NavBar = () => {
+const NavBar = () => {
 	const navigation = [
 		{ name: "Home", href: "/", icon: <House className="mr-2" /> },
 		{ name: "News", href: "/news", icon: <Megaphone className="mr-2" /> },
@@ -72,3 +72,5 @@ export const NavBar = () => {
 	  </div>
 	);
 };
+
+export default NavBar

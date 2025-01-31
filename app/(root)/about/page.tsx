@@ -1,6 +1,3 @@
-import Image from "next/image"
-import centria1 from "../../assets/centria1.jpg"
-import Logo from "../../assets/logo.svg"
 import {
     Card,
     CardContent,
@@ -15,23 +12,22 @@ export default function AboutPage () {
         <div>
 			{/* What is Centria Hub? */}
 			<div className="grid grid-cols-1 md:grid-cols-2 my-20">
-				<div className="flex flex-col justify-center gap-5 mx-10">
+				<div className="flex flex-col justify-center gap-5 mx-auto w-5/6 md:mx-0 md:ml-auto">
 					<h1 className="text-5xl">What is Centria Hub?</h1>
-					<p className="text-lg">Centria Hub is a platform that consolidates the latest university news, event information, and articles in one place, making it easily accessible for students, faculty, and stakeholders.</p>
+					<p className="text-lg">Centria Hub is a centralized digital platform that integrates all university resources—news, events, articles, and emails—into one intuitive space. It enhances accessibility, collaboration, and engagement for students, staff, and faculty.</p>
 				</div>
 				<div className="flex justify-center items-center py-5">
-					<Image src={centria1} alt="Centria hub" className="rounded-full w-1/2"/>
-					
+					<img src="/centria1.jpg" alt="Centria hub" className="rounded-full w-2/3"/>					
 				</div>
 			</div>
 			{/* Mission */}
-			<div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 py-20">
+			<div className="grid grid-cols-1 md:grid-cols-2 bg-centriaRed/90 py-20">
 				<div className="flex justify-center items-center py-5">
-					<Image src={Logo} alt="Centria hub" className="w-1/2" />
+					<img src="/logo.svg" alt="Centria hub" className="w-1/2"/>
 				</div>
-				<div className="flex flex-col justify-center gap-5 mx-10">
+				<div className="flex flex-col justify-center gap-5 mx-auto w-5/6 md:mx-0 md:mr-auto text-white">
 					<h1 className="text-5xl">Mission</h1>
-					<p className="text-lg">Our goal is to centralize university news and event information, which tends to be scattered, making it more easily accessible and enhancing the campus experience for students and faculty.</p>
+					<p className="text-lg">To simplify access to university resources, improve communication, and create a more connected campus experience.</p>
 				</div>
 			</div>
 			{/* Features & Value */}
