@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 
-export const Footer = () => {
+const Footer = () => {
 	return(
 	  <footer className='flex items-center justify-center bg-centriaRed p-5 grid lg:grid-cols-3'>
 		  {/* Navigation Menu */}
@@ -54,3 +54,5 @@ export const Footer = () => {
 	  </footer>
 	)
 }
+
+export default Footer;

@@ -1,6 +1,6 @@
 // import { elysia } from '@/elysia/client'
 import Image from 'next/image'
-import { CircleChevronDown, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
+import { CircleChevronDown } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -54,7 +54,7 @@ export default async function Home() {
                     </CardHeader>
                     <CardContent className='flex flex-col justify-content items-center'>
                       <Image
-                        src={item.sumbnail}
+                        src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
@@ -81,14 +81,14 @@ export default async function Home() {
             <CarouselContent>
               {news.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card>
+                  <Card className='bg-white'>
                     <CardHeader>
                       <CardTitle>{item.title}</CardTitle>
                       <CardDescription>{item.posted_date}</CardDescription>
                     </CardHeader>
                     <CardContent className='flex flex-col justify-content items-center'>
                       <Image
-                        src={item.sumbnail}
+                        src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
@@ -123,7 +123,7 @@ export default async function Home() {
                     </CardHeader>
                     <CardContent className='flex flex-col justify-content items-center'>
                       <Image
-                        src={item.sumbnail}
+                        src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
@@ -153,7 +153,7 @@ export const news = [
   {
     id: 1,
     title: "News Title",
-    sumbnail: '/sumbnail.jpg',
+    thumbnail: '/thumbnail.jpg',
     posted_date: "01-01-2025",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique dolore quae deleniti cupiditate pariatur eveniet, libero animi! Dignissimos dolorem non autem ab molestias? Ipsa amet labore optio veritatis pariatur?"
 
@@ -161,7 +161,7 @@ export const news = [
   {
     id: 2,
     title: "News Title",
-    sumbnail: '/sumbnail.jpg',
+    thumbnail: '/thumbnail.jpg',
     posted_date: "01-01-2025",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique dolore quae deleniti cupiditate pariatur eveniet, libero animi! Dignissimos dolorem non autem ab molestias? Ipsa amet labore optio veritatis pariatur?"
 
@@ -169,7 +169,7 @@ export const news = [
   {
     id: 3,
     title: "News Title",
-    sumbnail: '/sumbnail.jpg',
+    thumbnail: '/thumbnail.jpg',
     posted_date: "01-01-2025",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique dolore quae deleniti cupiditate pariatur eveniet, libero animi! Dignissimos dolorem non autem ab molestias? Ipsa amet labore optio veritatis pariatur?"
 
@@ -177,7 +177,7 @@ export const news = [
   {
     id: 4,
     title: "News Title",
-    sumbnail: '/sumbnail.jpg',
+    thumbnail: '/thumbnail.jpg',
     posted_date: "01-01-2025",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores similique dolore quae deleniti cupiditate pariatur eveniet, libero animi! Dignissimos dolorem non autem ab molestias? Ipsa amet labore optio veritatis pariatur?"
 
