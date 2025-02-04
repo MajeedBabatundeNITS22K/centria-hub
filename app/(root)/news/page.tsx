@@ -1,7 +1,6 @@
-export default function NewsPage () {
+const Page = () => {
 	return (
-	  <div>
-		  <p className="h-[100vh]">This is News Page.</p>
-	  </div>
+		<p className="h-[100vh]">This is News Page.</p>
 	)
 }
+export default Page
