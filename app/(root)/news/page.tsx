@@ -116,7 +116,7 @@ export default function NewsPage () {
 		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 			{displayedNews.map((item) => (
 				<Card key={item.id}>
-					<CardHeader>
+					<CardHeader className="md:h-1/3">
 						<CardTitle>{item.title}</CardTitle>
 						<CardDescription>{item.posted_date}</CardDescription>
 						<div className="flex flex-wrap gap-3">
@@ -125,16 +125,16 @@ export default function NewsPage () {
 							))}
 						</div>
 					</CardHeader>
-					<CardContent className='flex flex-col justify-content items-center'>
+					<CardContent className='flex flex-col justify-content items-center md:h-1/3'>
 						<Image
 							src={item.thumbnail}
 							alt={item.title}
 							width={200}
 							height={200}
-							className="rounded-lg shadow-md object-cover"
+							className="rounded-lg shadow-md object-cover md:h-full"
 						/>
 					</CardContent>
-					<CardFooter className="flex flex-col gap-5">
+					<CardFooter className="flex flex-col gap-5 md:h-1/3">
 						<p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
 						<Link href={`/news/${item.id}`} className={`${buttonVariants({variant:"centriaRed_outline", size:"lg"})}`}>Read More</Link>
 					</CardFooter>
