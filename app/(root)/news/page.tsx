@@ -1,5 +1,5 @@
 "use client"
-import { news } from "../page" // Temporary implementation
+import { news } from "@/app/data/news" // Temporary implementation
 import {
 	Card,
 	CardContent,
@@ -30,7 +30,6 @@ import {
 	PaginationNext,
 	PaginationPrevious,
   } from "@/components/ui/pagination"
-  
 
 const Page = () => {
 	const [selectedTags, setSelectedTags] = useState<string[]>([])

@@ -1,6 +1,6 @@
 'use client'
 import { useParams } from 'next/navigation'
-import { news } from '../../page'; // Temporary implementation
+import { news } from '@/app/data/news'; // Temporary implementation
 import { Badge } from "@/components/ui/badge"
 import Image from 'next/image';
 import {
@@ -24,7 +24,7 @@ type NewsItem = {
   tags: string[];
 };
 
-export default function SingleNewsPage() {
+const Page = () => {
   const { id } = useParams()
   const newsData: NewsItem | undefined = news.find((item) => item.id === Number(id))
 
@@ -80,3 +80,4 @@ export default function SingleNewsPage() {
     </div>
   );
 }
+export default Page
