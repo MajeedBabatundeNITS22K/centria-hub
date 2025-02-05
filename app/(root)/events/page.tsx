@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/pagination";
 import DateFormat from "@/components/DateFormat";
 
-const page = () => {
+const Page = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedSort, setSelectedSort] = useState<string>();
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -166,4 +166,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
