@@ -18,7 +18,8 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        centriaRed: "bg-centriaRed text-white hover:bg-primary/90",
+        centriaRed: "bg-centriaRed text-white hover:bg-white hover:text-centriaRed hover:border-2 hover:border-centriaRed transition-transform duration-300",
+        centriaRed_outline: "bg-white text-centriaRed border-2 border-centriaRed hover:bg-centriaRed hover:text-white transition-transform duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

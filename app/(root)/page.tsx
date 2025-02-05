@@ -48,23 +48,22 @@ export default async function Home() {
             <CarouselContent>
               {news.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card>
-                    <CardHeader>
+                  <Card className='h-full'>
+                    <CardHeader className='h-1/3'>
                       <CardTitle>{item.title}</CardTitle>
                       <CardDescription>{item.posted_date}</CardDescription>
                     </CardHeader>
-                    <CardContent className='flex flex-col justify-content items-center'>
+                    <CardContent className='flex flex-col justify-content items-center h-1/3'>
                       <Image
                         src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
-                        className="rounded-lg shadow-md object-cover"
+                        className="rounded-lg shadow-md object-cover h-full"
                       />
-                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardContent>
-                    <CardFooter>
-                      <p></p>
+                    <CardFooter className='h-1/3'>
+                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardFooter>
                   </Card>
                 </CarouselItem>
@@ -73,7 +72,7 @@ export default async function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <Link href="/news" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} hover:scale-110 transition-transform duration-300 my-20`}>More News</Link>
+          <Link href="/news" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} my-20`}>More News</Link>
         </div>
         {/* Events Section */}
         <div id='news' className='flex flex-col justify-center items-center bg-gray-100'>
@@ -82,23 +81,22 @@ export default async function Home() {
             <CarouselContent>
               {news.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className='bg-white'>
-                    <CardHeader>
+                  <Card className='bg-white h-full'>
+                    <CardHeader className='h-1/3'>
                       <CardTitle>{item.title}</CardTitle>
                       <CardDescription>{item.posted_date}</CardDescription>
                     </CardHeader>
-                    <CardContent className='flex flex-col justify-content items-center'>
+                    <CardContent className='flex flex-col justify-content items-center h-1/3'>
                       <Image
                         src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
-                        className="rounded-lg shadow-md object-cover"
+                        className="rounded-lg shadow-md object-cover h-full"
                       />
-                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardContent>
-                    <CardFooter>
-                      <p></p>
+                    <CardFooter className='h-1/3'>
+                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardFooter>
                   </Card>
                 </CarouselItem>
@@ -107,7 +105,7 @@ export default async function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <Link href="/events" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} hover:scale-110 transition-transform duration-300 my-20`}>More Events</Link>
+          <Link href="/events" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} my-20`}>More Events</Link>
         </div>
 
         {/* Articles Section */}
@@ -117,23 +115,22 @@ export default async function Home() {
             <CarouselContent>
               {news.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
-                  <Card>
-                    <CardHeader>
+                  <Card className='h-full'>
+                    <CardHeader className='h-1/3'>
                       <CardTitle>{item.title}</CardTitle>
                       <CardDescription>{item.posted_date}</CardDescription>
                     </CardHeader>
-                    <CardContent className='flex flex-col justify-content items-center'>
+                    <CardContent className='flex flex-col justify-content items-center h-1/3'>
                       <Image
                         src={item.thumbnail}
                         alt={item.title}
                         width={200}
                         height={200}
-                        className="rounded-lg shadow-md object-cover"
+                        className="rounded-lg shadow-md object-cover h-full"
                       />
-                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardContent>
-                    <CardFooter>
-                      <p></p>
+                    <CardFooter className='h-1/3'>
+                      <p className='mt-5'>{item.text.length > 100 ? item.text.substring(0, 100) + "..." : item.text}</p>
                     </CardFooter>
                   </Card>
                 </CarouselItem>
@@ -142,11 +139,9 @@ export default async function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-          <Link href="/articles" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} hover:scale-110 transition-transform duration-300 my-20`}>More Articles</Link>
+          <Link href="/articles" className={`${buttonVariants({variant:"centriaRed", size:"lg"})} my-20`}>More Articles</Link>
         </div>
       </main>
     </div>
   )
 }
-
-//Mock Data
