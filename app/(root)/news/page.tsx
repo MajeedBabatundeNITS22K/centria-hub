@@ -32,7 +32,7 @@ import {
   } from "@/components/ui/pagination"
   
 
-export default function NewsPage () {
+const Page = () => {
 	const [selectedTags, setSelectedTags] = useState<string[]>([])
 	const [selectedSort, setSelectedSort] = useState<string>()
 	const [currentPage, setCurrentPage] = useState<number>(1)
@@ -170,3 +170,4 @@ export default function NewsPage () {
 	  </div>
 	)
 }
+export default Page
