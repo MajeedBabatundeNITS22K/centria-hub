@@ -1,7 +1,7 @@
 'use client'
 import { useParams } from 'next/navigation'
 import { articles } from '@/app/data/articles'; // Temporary implementation
-import { Badge } from "@/components/ui/badge"
+import { Badge } from '@/components/ui/badge'
 import Image from 'next/image';
 import {
   Breadcrumb,
@@ -10,7 +10,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from '@/components/ui/breadcrumb'
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import DateFormat from '@/components/DateFormat';
@@ -75,7 +75,7 @@ const Page = () => {
 
       {/* Back Button */}
       <div className='flex justify-center'>
-        <Link href="/articles" className={`${buttonVariants({variant: "centriaRed"})}`}>Back</Link>
+        <Link href="/articles" className={`${buttonVariants({variant: 'centriaRed'})}`}>Back</Link>
       </div>
     </div>
   );
