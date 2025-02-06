@@ -1,14 +1,14 @@
-"use client";
-import { articles } from "@/app/data/articles"; // Temporary implementation
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
-import { useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowUpDown, Tag } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
+'use client';
+import { articles } from '@/app/data/articles'; // Temporary implementation
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
+import { useState } from 'react';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ArrowUpDown, Tag } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Checkbox } from '@/components/ui/checkbox';
+import Link from 'next/link';
 import {
   Pagination,
   PaginationContent,
@@ -16,8 +16,8 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
-import DateFormat from "@/components/DateFormat";
+} from '@/components/ui/pagination';
+import DateFormat from '@/components/DateFormat';
 
 const Page = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -25,7 +25,7 @@ const Page = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 10;
 
-  const tags = ["engineering", "music", "business", "healthcare", "application", "research and development"];
+  const tags = ['engineering', 'music', 'business', 'healthcare', 'application', 'research and development'];
 
   const handleSelectedTags = (tag: string) => {
     if (selectedTags.includes(tag)) {
@@ -64,7 +64,7 @@ const Page = () => {
                 </SelectItem>
               </SelectContent>
             </Select>
-            <Button variant={"centriaRed"} onClick={() => console.log("Selected Sort:", selectedSort)}>
+            <Button variant={'centriaRed'} onClick={() => console.log('Selected Sort:', selectedSort)}>
               Sort
             </Button>
           </div>
@@ -93,7 +93,7 @@ const Page = () => {
                 ))}
               </SelectContent>
             </Select>
-            <Button variant="centriaRed" onClick={() => console.log("Selected Tags: ", selectedTags)}>
+            <Button variant="centriaRed" onClick={() => console.log('Selected Tags: ', selectedTags)}>
               Filter
             </Button>
           </div>
@@ -114,10 +114,10 @@ const Page = () => {
                   </Badge>
                 ))}
               </div>
-			  <p className="mt-5">{item.text.length > 100 ? item.text.substring(0, 200) + "..." : item.text}</p>
+			  <p className="mt-5">{item.text.length > 100 ? `${item.text.substring(0, 200)  }...` : item.text}</p>
               <Link
                 href={`/articles/${item.id}`}
-                className={`${buttonVariants({ variant: "centriaRed_outline", size: "lg" })} w-fit`}
+                className={`${buttonVariants({ variant: 'centriaRed_outline', size: 'lg' })} w-fit`}
               >
                 Read More
               </Link>
@@ -140,7 +140,7 @@ const Page = () => {
         <PaginationContent>
           <PaginationItem>
             <PaginationPrevious
-              className={`${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
+              className={`${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             />
           </PaginationItem>
@@ -154,7 +154,7 @@ const Page = () => {
           ))}
           <PaginationItem>
             <PaginationNext
-              className={`${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
+              className={`${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
               onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
             />
           </PaginationItem>
