@@ -1,14 +1,15 @@
 import React from 'react'
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 
-const Layout = ({children}: Readonly<{children: React.ReactNode}>) => {
+import Footer from '@/components/Footer'
+import NavBar from '@/components/NavBar'
+
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 	return (
-	  <>
-		  <NavBar/>
-		  {children}
-		  <Footer />
-	  </>
+		<>
+			<NavBar />
+			{children}
+			<Footer />
+		</>
 	)
 }
 export default Layout

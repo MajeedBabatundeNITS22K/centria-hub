@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -6,18 +6,18 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu"
+} from '@/components/ui/navigation-menu'
+import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 import { House, Newspaper, Calendar, BadgeInfo, Megaphone, Menu } from 'lucide-react';
-import Link from "next/link";
+import Link from 'next/link';
 
 const NavBar = () => {
 	const navigation = [
-		{ name: "Home", href: "/", icon: <House className="mr-2" /> },
-		{ name: "News", href: "/news", icon: <Megaphone className="mr-2" /> },
-		{ name: "Events", href: "/events", icon: <Calendar className="mr-2" /> },
-		{ name: "Articles", href: "/articles", icon: <Newspaper className="mr-2" /> },
-		{ name: "About", href: "/about", icon: <BadgeInfo className="mr-2" /> },
+		{ name: 'Home', href: '/', icon: <House className="mr-2" /> },
+		{ name: 'News', href: '/news', icon: <Megaphone className="mr-2" /> },
+		{ name: 'Events', href: '/events', icon: <Calendar className="mr-2" /> },
+		{ name: 'Articles', href: '/articles', icon: <Newspaper className="mr-2" /> },
+		{ name: 'About', href: '/about', icon: <BadgeInfo className="mr-2" /> },
 	];
 
 	return (
