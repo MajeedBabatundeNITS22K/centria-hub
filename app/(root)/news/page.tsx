@@ -154,7 +154,7 @@ const Page = () => {
 						<CardFooter className='flex flex-col gap-5 md:h-1/3'>
 							<p className='mt-5'>
 								{item.text.length > 100
-									? item.text.substring(0, 100) + '...'
+									? `${item.text.substring(0, 100)}...`
 									: item.text}
 							</p>
 							<Link

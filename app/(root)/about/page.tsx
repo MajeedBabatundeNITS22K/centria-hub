@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { History, Tag, UserRoundPen } from 'lucide-react'
 
 import {
@@ -23,7 +25,9 @@ export default function AboutPage() {
 					</p>
 				</div>
 				<div className='flex items-center justify-center py-5'>
-					<img
+					<Image
+						width={100}
+						height={100}
 						src='/centria1.jpg'
 						alt='Centria hub'
 						className='w-2/3 rounded-full'
@@ -33,7 +37,13 @@ export default function AboutPage() {
 			{/* Mission */}
 			<div className='grid grid-cols-1 bg-centriaRed/90 py-20 md:grid-cols-2'>
 				<div className='flex items-center justify-center py-5'>
-					<img src='/logo.svg' alt='Centria hub' className='w-1/2' />
+					<Image
+						width={100}
+						height={100}
+						src='/logo.svg'
+						alt='Centria hub'
+						className='w-1/2'
+					/>
 				</div>
 				<div className='mx-auto flex w-5/6 flex-col justify-center gap-5 text-white md:mx-0 md:mr-auto'>
 					<h1 className='text-5xl'>Mission</h1>
