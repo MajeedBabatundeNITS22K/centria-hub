@@ -17,6 +17,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import DateFormat from "@/components/DateFormat";
 
 const Page = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -105,7 +106,7 @@ const Page = () => {
           <Card key={item.id} className="flex flex-col md:flex-row">
             <CardHeader className="flex-1">
               <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.posted_date}</CardDescription>
+              <CardDescription>{DateFormat(item.posted_date)}</CardDescription>
               <div className="flex flex-wrap gap-3">
                 {item.tags?.map((tag) => (
                   <Badge key={tag} variant="outline" className="w-fit">

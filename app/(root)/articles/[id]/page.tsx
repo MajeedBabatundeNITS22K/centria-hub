@@ -12,8 +12,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import Link from 'next/link';
-import { Button, buttonVariants } from '@/components/ui/button';
-import { CalendarDays } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
 import DateFormat from '@/components/DateFormat';
 
 type ArticleItem = {
@@ -53,7 +52,7 @@ const Page = () => {
 
       {/* Published Date & Tags */}
       <div className='flex flex-col md:flex-row md:items-center gap-3 mb-5'>
-        <p className='text-gray-500 text-sm'>{articleData?.posted_date}</p>
+        <p className='text-gray-500 text-sm'>{DateFormat(articleData?.posted_date)}</p>
         <div className="flex flex-wrap gap-3">
           {articleData.tags?.map((tag) => (
             <Badge key={tag} variant="outline" className="w-fit">{tag}</Badge>
