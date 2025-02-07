@@ -46,7 +46,7 @@ const NavBar = () => {
 	return (
 		<div className='relative flex items-center justify-between bg-centriaRed px-4 py-2'>
 			{/* Logo */}
-			<Link href='/' className='flex hidden items-center md:block'>
+			<Link href='/' className='hidden items-center md:block'>
 				<p className='text-2xl font-bold text-white'>Centria Hub</p>
 			</Link>
 
