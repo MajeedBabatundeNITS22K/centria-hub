@@ -1,0 +1,24 @@
+name: Blank Issue
+description: "Use this template only with permission from @didenko-serhii."
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Custom Issue\nThis template is for special cases only. Please use it **only with permission from @didenko-serhii**."
+
+  - type: textarea
+    id: custom_issue_details
+    attributes:
+      label: "Issue Details"
+      description: "Describe the issue or request in detail."
+      placeholder: "Provide as much relevant information as possible."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agreement-check
+    attributes:
+      label: Request Agreement
+      options:
+        - label: I have read the requirements for opening an issue above
+          required: true
