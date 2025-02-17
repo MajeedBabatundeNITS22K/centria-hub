@@ -79,8 +79,12 @@ const Page = () => {
 								<SelectValue placeholder='Publication date' />
 							</SelectTrigger>
 							<SelectContent className='bg-white'>
-								<SelectItem value='latest'>Latest</SelectItem>
-								<SelectItem value='oldest'>Oldest</SelectItem>
+								<SelectItem value='latest' className='cursor-pointer'>
+									Latest
+								</SelectItem>
+								<SelectItem value='oldest' className='cursor-pointer'>
+									Oldest
+								</SelectItem>
 							</SelectContent>
 						</Select>
 						<Button
@@ -104,7 +108,11 @@ const Page = () => {
 							</SelectTrigger>
 							<SelectContent className='bg-white'>
 								{tags.map(tag => (
-									<div key={tag}>
+									<div
+										key={tag}
+										onClick={() => handleSelectedTags(tag)}
+										className='cursor-pointer'
+									>
 										<Checkbox
 											checked={selectedTags.includes(tag)}
 											onCheckedChange={() => handleSelectedTags(tag)}
