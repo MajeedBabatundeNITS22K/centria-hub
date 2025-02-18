@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -46,7 +47,8 @@ const NavBar = () => {
 	return (
 		<div className='relative flex items-center justify-between bg-centriaRed px-4 py-2'>
 			{/* Logo */}
-			<Link href='/' className='hidden items-center md:block'>
+			<Link href='/' className='hidden items-center gap-2 md:flex'>
+				<Image src='/logo.svg' alt='logo' width={20} height={20} />
 				<p className='text-2xl font-bold text-white'>Centria Hub</p>
 			</Link>
 
