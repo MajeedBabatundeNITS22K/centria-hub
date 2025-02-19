@@ -8,7 +8,7 @@ const Footer = () => {
 		<footer className='grid items-center justify-center bg-centriaRed p-5 lg:grid-cols-3'>
 			{/* Contact Information  */}
 			<div className='mb-5 flex flex-col items-center gap-1 text-white lg:mx-auto lg:mb-0 lg:items-start'>
-				<p className='text-xl font-bold text-white'>
+				<p className='text-center text-xl font-bold text-white lg:text-start'>
 					Centria University of Applied Sciences
 				</p>
 				<p>Talonpojankatu 2A</p>
@@ -60,7 +60,7 @@ const Footer = () => {
 				</div>
 			</div>
 			{/* Navigation Menu */}
-			<div className='flex flex-col items-center gap-3 text-white'>
+			<div className='flex flex-col items-center gap-3 text-white lg:mx-auto lg:items-end'>
 				<p className='text-2xl font-bold'>Contents</p>
 				<div className='flex flex-row gap-3'>
 					<Link
