@@ -1,10 +1,16 @@
 version: '3'
 
+networks:
+  dev:
+    driver: bridge
+
 services:
   payload:
     build:
       context: .
       dockerfile: Dockerfile
+    networks:
+      - dev
     restart: always
     ports:
       - '3000:3000'
@@ -15,6 +21,8 @@ services:
 
   postgres:
     restart: always
+    networks:
+      - dev
     image: postgres:latest
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -28,7 +36,3 @@ services:
 volumes:
   data:
   pgdata:
-
-networks:
-  default:
-    driver: bridge
