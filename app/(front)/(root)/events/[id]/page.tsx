@@ -6,7 +6,7 @@ import { useParams } from 'next/navigation'
 
 import { CalendarDays } from 'lucide-react'
 
-import { events } from '@/app/data/events'
+import { events } from '@/app/(front)/data/events'
 import DateFormat from '@/components/DateFormat'
 // Temporary implementation
 import { Badge } from '@/components/ui/badge'
@@ -60,7 +60,7 @@ const Page = () => {
 			<Breadcrumb className='mb-5'>
 				<BreadcrumbList>
 					<BreadcrumbItem>
-						<BreadcrumbLink href='/'>Home</BreadcrumbLink>
+						<BreadcrumbLink href='/public'>Home</BreadcrumbLink>
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
