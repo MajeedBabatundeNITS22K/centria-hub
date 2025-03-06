@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
-import { news } from '@/app/data/news'
+import { news } from '@/app/(front)/data/news'
 // Temporary implementation
 import { Badge } from '@/components/ui/badge'
 import {
@@ -41,7 +41,7 @@ const Page = () => {
 			<Breadcrumb className='mb-5'>
 				<BreadcrumbList>
 					<BreadcrumbItem>
-						<BreadcrumbLink href='/'>Home</BreadcrumbLink>
+						<BreadcrumbLink href='/public'>Home</BreadcrumbLink>
 					</BreadcrumbItem>
 					<BreadcrumbSeparator />
 					<BreadcrumbItem>
