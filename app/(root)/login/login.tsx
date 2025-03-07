@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; 
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
@@ -9,7 +8,6 @@ import Link from "next/link";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter(); 
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +42,7 @@ const Login = () => {
           </form>
         </CardContent>
         <CardFooter className="text-center text-gray-600">
-          Don't have an account? <Link href="/signup" className="text-red-600 hover:underline">Sign Up</Link>
+          Don&apos;t have an account? <Link href="/signup" className="text-red-600 hover:underline">Sign Up</Link>
         </CardFooter>
       </Card>
     </div>
@@ -52,3 +50,4 @@ const Login = () => {
 };
 
 export default Login;
+
